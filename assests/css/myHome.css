@@ -1,0 +1,205 @@
+/* CSS for myHome.css */
+
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: #e3bebe; */
+  background-image:url(https://wd.imgix.net/image/admin/K1IN7zWIjFLjZzJ4Us3J.jpg?auto=format);
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+}
+.dark-theme{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5),
+  rgba(0, 0, 0, 0.5)),url(https://wd.imgix.net/image/admin/K1IN7zWIjFLjZzJ4Us3J.jpg?auto=format);
+  color: #fff;
+  background-repeat:no-repeat;
+} 
+#theme{
+  float: left;
+  border: 3px solid #103fde14;
+  border-radius: 10px;
+  height: 50px;
+  width: 95px;
+  margin: 10px;
+  box-shadow:1px 5px 7px 0.5px #726e6ebd;
+  background-color: cornflowerblue;
+}
+.center {
+  text-align: center;
+}
+
+/* Header Styles */
+
+#page-heading {
+  color: #333;
+  margin-top: 30px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#page-heading i {
+  font-size: 48px;
+  margin-right: 10px;
+}
+
+/* Contacts List Styles */
+
+.container {
+  display: flex;
+}
+
+#nameList {
+  /* background-color: rgb(124, 203, 203);
+   */
+   background-color: rgb(251 255 142 / 0%);
+  flex: 1;
+  margin: 50px 30px;
+  padding: 10px;
+  border: 3px solid black;
+  border-radius: 5px;
+  overflow-y:scroll;
+  max-height: 400px;
+  scroll-behavior: smooth;
+
+}
+/* scroolbar */
+/* Hide the default scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: transparent; /* Set background to transparent */
+}
+
+/* Handle (scroller) */
+::-webkit-scrollbar-thumb {
+  background-color: #08a794; /* Set light blue color */
+  border: 0.5px solid transparent;
+  border-radius: 20px;
+  background-clip: content-box;
+}
+
+/* hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #107083;
+}
+
+
+.details {
+  margin-right: 10px;
+  max-height: 80px;
+}
+
+.details p {
+  margin: 5px 0;
+}
+
+.delete-button {
+  display: inline-block;
+}
+
+.delete-button a {
+  text-decoration: none;
+  border: 2px solid black;
+  box-shadow: 5px 2px 5px 2px rgba(19, 27, 50, 0.300);
+  padding: 5px;
+  border-radius: 20px;
+  color: rgb(8, 0, 5);
+  background-color: #e3f2fd;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.delete-button a:hover {
+  color: rgba(10, 114, 142, 0.941);
+}
+
+.delete-button a i {
+  color: rgba(219, 206, 135, 0);
+  font-size: 14px;
+  margin: 5px;
+  transition: 0.4s ease-in-out;
+}
+
+/* Form Styles */
+
+#contactForm {
+  flex: 1;
+  margin: 30px 30px;
+  background-color:rgb(207 181 36 / 0%);
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.150);
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+form input[type="text"],
+form input[type="tel"],
+form input[type="email"],
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 0px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgb(0 0 0 / 96%);
+}
+
+form input[type="submit"] {
+  background-color: #45b893;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Animations */
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+li {
+  animation: slideIn 0.5s ease-in-out;
+  margin-bottom: 20px;
+}
+
+#contactForm {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Media Query for Responsive Layout */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  #nameList,
+  #contactForm {
+    width: 100%;
+    margin: 10px;
+  }
+}
